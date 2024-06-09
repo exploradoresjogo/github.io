@@ -61,7 +61,7 @@ function criaJogador(){
   var LOClistaJogadores = [];
 
   // Definir os nomes dos jogadores
-  let nomesJogadores = [ "José", "Paulo", "Joci", "Leão", "Mariana", "Marlon", "Cristina", "Mario"];
+  let nomesJogadores = [ "José", "Paulo", "Joci", "Leão", "Mariana", "Marllon", "Cristina", "Mario"];
   
   // Loop para criar os jogadores e suas partidas
   for (let i = 0; i < nomesJogadores.length; i++) {
