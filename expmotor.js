@@ -53,7 +53,7 @@ function resetcalc() {
 function voltartabela(){
    salvarListaJogadores(listaJogadores);
   //window.history.back();
-  window.location.href = window.location.href = "index.html"; // // Redirecionar para a página "index.html"
+  window.location.href = window.location.href = "calculadora.html"; // // Redirecionar para a página "caclculadora.html"
 }
 
 
