@@ -1,108 +1,516 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C27DXK1WRK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-       gtag('js', new Date());
-       gtag('config', 'G-C27DXK1WRK');
-    </script>
-    <title>Exploradores - Jogo de Aventura e Estratégia</title>
-    <link rel="icon" href="./favicon.png" type="image/png">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .title-image {
-            width: 100%;
-            height: auto;
-        }
-        .table-container {
-            display: table;
-            width: 100%;
-            margin: 20px 0;
-        }
-        .row {
-            display: table-row;
-        }
-        .cell {
-            display: table-cell;
-            vertical-align: top;
-            text-align: center;
-        }
-        .cell img {
-            width: 100%;
-            height: auto;
-            cursor: pointer;
-        }
-        .first-table .cell:nth-child(2) {
-            padding-top: 50px; /* Ajuste o valor conforme necessário */
-        }
-        .second-table {
-            margin-top: 10px; /* Espaço vazio entre as tabelas */
-            text-align: center;
-        }
-        .second-table .cell img {
-            width: 50px; /* Definindo um tamanho fixo para ícones pequenos */
-            height: 50px; /* Definindo um tamanho fixo para ícones pequenos */
-        }
-        .second-table .cell {
-            padding: 0 25px; /* Espaçamento horizontal entre as células */
-        }
-        .second-table .row {
-            display: flex;
-            justify-content: center;
-        }
-        .second-table .cell {
-            padding: 0 25px; /* Espaçamento horizontal entre as células */
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Imagem de título -->
-        <img src="img/bttitulo.png" alt="Título" class="title-image">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>eXp Calc - Formulário de Totalização</title>
+    <link type="text/css" rel="stylesheet" href="resources/calc_style.css">
+    <style type="text/css">
+	.ritz .waffle a { color: inherit; }
+  .ritz .waffle .r11{border-bottom:1px SOLID #000000;background-color:#ffff00;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r7{border-bottom:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .r14{border-bottom:1px SOLID #000000;background-color:#00ff00;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r6{border-bottom:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#00ff00;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .r18{border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r0{border-bottom:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r4{border-bottom:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ff8555;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r9{border-bottom:1px SOLID #000000;background-color:#434343;text-align:center;font-weight:bold;color:#f3f3f3;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r2{border-bottom:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#b35aed;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r3{border-bottom:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ffff00;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .r13{border-bottom:1px SOLID #000000;background-color:#00ffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .r10{border-bottom:1px SOLID #000000;background-color:#9900ff;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .r15{border-bottom:1px SOLID #000000;background-color:#d9d9d9;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r8{border-bottom:1px SOLID #0000ff;background-color:#0000ff;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r1{border-bottom:1px SOLID #000000;background-color:#434343;text-align:center;font-weight:bold;color:#f3f3f3;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .r12{border-bottom:1px SOLID #000000;background-color:#ff8555;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .r5{border-bottom:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#00ffff;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .r17{border-bottom:1px SOLID #0000ff;background-color:#0000ff;text-align:center;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .r16{border-bottom:1px SOLID #666666;background-color:#666666;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .s6{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .s18{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#999999;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .s11{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:center;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle  .s7{border-bottom:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ffffff;font-family:'docs-Google Sans',Arial;font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s30{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#00ffff;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s22{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#cccccc;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s26{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ff8555;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s0{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s5{border-right:1px SOLID #000000;background-color:#0000ff;text-align:left;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s25{border-left: none;border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .s28{border-bottom:1px SOLID #000000;background-color:#000000;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s9{border-bottom:1px SOLID #ffffff;border-right:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ffffff;font-family:'docs-Google Sans',Arial;font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle  .s2{border-bottom:1px SOLID #000000;background-color:#000000;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s8{border-bottom:1px SOLID #ffffff;background-color:#000000;text-align:center;font-weight:bold;color:#ffffff;font-family:'docs-Google Sans',Arial;font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s23{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#555555;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s16{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#9900ff;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s14{border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s29{border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s32{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#00ff00;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s27{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ff8555;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s20{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ffff00;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s33{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#00ff00;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s10{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#ffffff;font-family:'docs-Google Sans',Arial;font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s21{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffff00;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s24{border-right: none;border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s15{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#000000;text-align:center;font-weight:bold;color:#b35aed;font-family:'Arial';font-size:28pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s12{border-bottom:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s13{border-right:1px SOLID #000000;background-color:#ffffff;text-align:center;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s17{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#cccccc;text-align:center;font-weight:bold;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+  .ritz .waffle .s3{border-bottom:1px SOLID #000000;background-color:#0000ff;text-align:left;font-weight:bold;color:#ffffff;font-family:'docs-Google Sans',Arial;font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s19{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s4{border-bottom:1px SOLID #000000;background-color:#0000ff;text-align:left;color:#ffffff;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle .s31{border-bottom:1px SOLID #000000;border-right:1px SOLID #000000;background-color:#00ffff;text-align:center;font-weight:bold;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz .waffle  .s1{border-bottom:1px SOLID #000000;border-right:1px SOLID #ffffff;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:28pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
+	.ritz.grid-container {width: 950px; margin: 0 auto; color:#ffffff;background-color:#000000;}
+  .ritz.grid-container table {width: 100%; border-collapse: collapse;}
+</style>
+  </head>
+  <body>
 
-        <!-- Primeira tabela -->
-        <div class="table-container first-table">
-            <div class="row">
-                <div class="cell"><a href="calculadora.html" target="_blank"><img src="img/btcalculadora.png" alt="Calculadora"></a></div>
-                <div class="cell"><a href="./download/exploradoresmanualmobile.pdf" target="_blank"><img src="img/btmanual.png" alt="Manual do jogo para celular"></a></div>
-            </div>
-            <div class="row">
-                <div class="cell"><a href="ajuda1.html" target="_blank"><img src="img/btmanualcalc.png" alt="Manual da calculadora"></a></div>
-                <div class="cell"><a href="sobre.html" target="_blank"><img src="img/btsobre.png" alt="Sobre o jogo Exploradores"></a></div>
-            </div>
-        </div>
-
-        <!-- Espaço vazio -->
-        <div style="height: 10px;"></div>
-
-        <!-- Segunda tabela -->
-        <div class="table-container second-table">
-            <div class="row">
-                <div class="cell"><a href="https://www.facebook.com/share/VeXWJtTjgaeFu7Po/?mibextid=qi2Omg" target="_blank"><img src="img/btfacebook.png" alt="Facebook"></a></div>
-                <div class="cell"><a href="https://www.instagram.com/jogo.exploradores?igsh=MXF4dTI3OGw3ZXFiag==" target="_blank"><img src="img/btinstagram.png" alt="Instagram"></a></div>
-                <div class="cell"><a href="mailto:jogoexploradores@gmail.com" target="_blank"><img src="img/btgmail.png" alt="Mande um email pra nós"></a></div>
-            </div>
-        </div>
-
-        <!-- Espaço vazio -->
-        <div style="height: 5px;"></div>
-        <div><h1>Copyright 2024</h1></div>
+    <div class="ritz grid-container"  dir="ltr">
+      <table class="ritz grid-container" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td class="s3" style="width: 15%;"></td>
+            <td class="s3" style="width: 70%; vertical-align: middle;" dir="ltr">
+              <div style="color:#ffffff; text-align: center; font-size: 30pt;">Tabela de Resultados - eXp [1/2]</div>
+            </td>
+            <td class="s3" style="width:  15%;"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-</body>
+      <div class="ritz grid-container" style="container;" dir="ltr">
+        <table class="waffle" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr style="height: 5px">
+              <td class="r0" dir="ltr" style="width: 20%;">Jogs.</td>
+              <td class="r1" dir="ltr" style="width:  2%;">P</td>
+              <td class="r2" dir="ltr" style="width:  9%;">MÃO</td>
+              <td class="r3" dir="ltr" style="width:  9%;">AMA</td>
+              <td class="r4" dir="ltr" style="width:  9%;">VER</td>
+              <td class="r5" dir="ltr" style="width:  9%;">AZL</td>
+              <td class="r6" dir="ltr" style="width:  9%;">VRD</td>
+              <td class="r7" dir="ltr" style="width: 15%;">SUB</td>
+              <td class="r7" dir="ltr" style="width: 18%;">TOTAL</td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r8" >1</td>
+              <td class="r9" >1</td>
+              <td class="r10" dir="ltr" id="004"><a href="calcmao.html?arg1=0&amp;arg2=0&amp;arg3=4"><div  id="vlr004">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="000"><a href="partida.html?arg1=0&amp;arg2=0&amp;arg3=0"><div  id="vlr000">0</div></a></td>
+              <td class="r12" dir="ltr" id="001"><a href="partida.html?arg1=0&amp;arg2=0&amp;arg3=1"><div  id="vlr001">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="002"><a href="partida.html?arg1=0&amp;arg2=0&amp;arg3=2"><div  id="vlr002">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="003"><a href="partida.html?arg1=0&amp;arg2=0&amp;arg3=3"><div  id="vlr003">0</div></a></a></td>
+              <td class="r15">   <div   id="sub00">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17" id="jog1" title="Jogador 1" onclick="EditarNome(this,0)">Jogador1</td>
+              <td class="r9">2</td>
+              <td class="r10" dir="ltr" id="014"><a href="calcmao.html?arg1=0&amp;arg2=1&amp;arg3=4"><div  id="vlr014">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="010"><a href="partida.html?arg1=0&amp;arg2=1&amp;arg3=0"><div  id="vlr010">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="011"><a href="partida.html?arg1=0&amp;arg2=1&amp;arg3=1"><div  id="vlr011">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="012"><a href="partida.html?arg1=0&amp;arg2=1&amp;arg3=2"><div  id="vlr012">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="013"><a href="partida.html?arg1=0&amp;arg2=1&amp;arg3=3"><div  id="vlr013">0</div></a></a></td>
+              <td class="r15"><div   id="sub01">0</div></td>
+              <td class="r16"><div   id="tot0">0</div></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17"></td>
+              <td class="r9">3</td>
+              <td class="r10" dir="ltr" id="024"><a href="calcmao.html?arg1=0&amp;arg2=2&amp;arg3=4"><div  id="vlr024">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="020"><a href="partida.html?arg1=0&amp;arg2=2&amp;arg3=0"><div  id="vlr020">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="021"><a href="partida.html?arg1=0&amp;arg2=2&amp;arg3=1"><div  id="vlr021">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="022"><a href="partida.html?arg1=0&amp;arg2=2&amp;arg3=2"><div  id="vlr022">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="023"><a href="partida.html?arg1=0&amp;arg2=2&amp;arg3=3"><div  id="vlr023">0</div></a></a></td>
+              <td class="r15"><div   id="sub02">0</div</td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 4px">
+      
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r8">2</td>
+              <td class="r9">1</td>
+              <td class="r10" dir="ltr" id="104"><a href="calcmao.html?arg1=1&amp;arg2=0&amp;arg3=4"><div  id="vlr104">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="100"><a href="partida.html?arg1=1&amp;arg2=0&amp;arg3=0"><div  id="vlr100">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="101"><a href="partida.html?arg1=1&amp;arg2=0&amp;arg3=1"><div  id="vlr101">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="102"><a href="partida.html?arg1=1&amp;arg2=0&amp;arg3=2"><div  id="vlr102">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="103"><a href="partida.html?arg1=1&amp;arg2=0&amp;arg3=3"><div  id="vlr103">0</div></a></a></td>
+              <td class="r15"><div   id="sub10">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17" id="jog2" title="Jogador 2" onclick="EditarNome(this,1)">Jogador2</td>
+              <td class="r9">2</td>
+              <td class="r10" dir="ltr" id="114"><a href="calcmao.html?arg1=1&amp;arg2=1&amp;arg3=4"><div  id="vlr114">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="110"><a href="partida.html?arg1=1&amp;arg2=1&amp;arg3=0"><div  id="vlr110">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="111"><a href="partida.html?arg1=1&amp;arg2=1&amp;arg3=1"><div  id="vlr111">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="112"><a href="partida.html?arg1=1&amp;arg2=1&amp;arg3=2"><div  id="vlr112">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="113"><a href="partida.html?arg1=1&amp;arg2=1&amp;arg3=3"><div  id="vlr113">0</div></a></a></td>
+              <td class="r15"><div   id="sub11">0</div></td>
+              <td class="r16"><div   id="tot1">0</div></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17"></td>
+              <td class="r9">3</td>
+              <td class="r10" dir="ltr" id="124"><a href="calcmao.html?arg1=1&amp;arg2=2&amp;arg3=4"><div  id="vlr124">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="120"><a href="partida.html?arg1=1&amp;arg2=2&amp;arg3=0"><div  id="vlr120">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="121"><a href="partida.html?arg1=1&amp;arg2=2&amp;arg3=1"><div  id="vlr121">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="122"><a href="partida.html?arg1=1&amp;arg2=2&amp;arg3=2"><div  id="vlr122">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="123"><a href="partida.html?arg1=1&amp;arg2=2&amp;arg3=3"><div  id="vlr123">0</div></a></a></td>
+              <td class="r15"><div   id="sub12">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 4px">
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r8">3</td>
+              <td class="r9">1</td>
+              <td class="r10" dir="ltr" id="204"><a href="calcmao.html?arg1=2&amp;arg2=0&amp;arg3=4"><div  id="vlr204">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="200"><a href="partida.html?arg1=2&amp;arg2=0&amp;arg3=0"><div  id="vlr200">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="201"><a href="partida.html?arg1=2&amp;arg2=0&amp;arg3=1"><div  id="vlr201">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="202"><a href="partida.html?arg1=2&amp;arg2=0&amp;arg3=2"><div  id="vlr202">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="203"><a href="partida.html?arg1=2&amp;arg2=0&amp;arg3=3"><div  id="vlr203">0</div></a></a></td>
+              <td class="r15"><div   id="sub20">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17" id="jog3" title="Jogador 3" onclick="EditarNome(this,2)">Jogador3</td>
+              <td class="r9">2</td>
+              <td class="r10" dir="ltr" id="214"><a href="calcmao.html?arg1=2&amp;arg2=1&amp;arg3=4"><div  id="vlr214">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="210"><a href="partida.html?arg1=2&amp;arg2=1&amp;arg3=0"><div  id="vlr210">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="211"><a href="partida.html?arg1=2&amp;arg2=1&amp;arg3=1"><div  id="vlr211">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="212"><a href="partida.html?arg1=2&amp;arg2=1&amp;arg3=2"><div  id="vlr212">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="213"><a href="partida.html?arg1=2&amp;arg2=1&amp;arg3=3"><div  id="vlr213">0</div></a></a></td>
+              <td class="r15"><div   id="sub21">0</div></td>
+              <td class="r16"><div   id="tot2">0</div></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17"></td>
+              <td class="r9">3</td>
+              <td class="r10" dir="ltr" id="224"><a href="calcmao.html?arg1=2&amp;arg2=2&amp;arg3=4"><div  id="vlr224">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="220"><a href="partida.html?arg1=2&amp;arg2=2&amp;arg3=0"><div  id="vlr220">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="221"><a href="partida.html?arg1=2&amp;arg2=2&amp;arg3=1"><div  id="vlr221">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="222"><a href="partida.html?arg1=2&amp;arg2=2&amp;arg3=2"><div  id="vlr222">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="223"><a href="partida.html?arg1=2&amp;arg2=2&amp;arg3=3"><div  id="vlr223">0</div></a></a></td>
+              <td class="r15"><div   id="sub22">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 4px">
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r8">4</td>
+              <td class="r9">1</td>
+              <td class="r10" dir="ltr" id="304"><a href="calcmao.html?arg1=3&amp;arg2=0&amp;arg3=4"><div  id="vlr304">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="300"><a href="partida.html?arg1=3&amp;arg2=0&amp;arg3=0"><div  id="vlr300">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="301"><a href="partida.html?arg1=3&amp;arg2=0&amp;arg3=1"><div  id="vlr301">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="302"><a href="partida.html?arg1=3&amp;arg2=0&amp;arg3=2"><div  id="vlr302">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="303"><a href="partida.html?arg1=3&amp;arg2=0&amp;arg3=3"><div  id="vlr303">0</div></a></a></td>
+              <td class="r15"><div   id="sub30">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17" id="jog4" title="Jogador 4" onclick="EditarNome(this,3)">Jogador4</td>
+              <td class="r9">2</td>
+              <td class="r10" dir="ltr" id="314"><a href="calcmao.html?arg1=3&amp;arg2=1&amp;arg3=4"><div  id="vlr314">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="310"><a href="partida.html?arg1=3&amp;arg2=1&amp;arg3=0"><div  id="vlr310">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="311"><a href="partida.html?arg1=3&amp;arg2=1&amp;arg3=1"><div  id="vlr311">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="312"><a href="partida.html?arg1=3&amp;arg2=1&amp;arg3=2"><div  id="vlr312">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="313"><a href="partida.html?arg1=3&amp;arg2=1&amp;arg3=3"><div  id="vlr313">0</div></a></a></td>
+              <td class="r15"><div   id="sub31">0</div></td>
+              <td class="r16"><div   id="tot3">0</div></td>
+            </tr>
+
+            <tr style="height: 80px">
+              <td class="r17"></td>
+              <td class="r9">3</td>
+              <td class="r10" dir="ltr" id="324"><a href="calcmao.html?arg1=3&amp;arg2=2&amp;arg3=4"><div  id="vlr324">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="320"><a href="partida.html?arg1=3&amp;arg2=2&amp;arg3=0"><div  id="vlr320">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="321"><a href="partida.html?arg1=3&amp;arg2=2&amp;arg3=1"><div  id="vlr321">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="322"><a href="partida.html?arg1=3&amp;arg2=2&amp;arg3=2"><div  id="vlr322">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="323"><a href="partida.html?arg1=3&amp;arg2=2&amp;arg3=3"><div  id="vlr323">0</div></a></a></td>
+              <td class="r15"><div   id="sub32">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 4px">
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+            <tr style="height:20px">
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ritz grid-container"  dir="ltr">
+        <table class="ritz grid-container" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td class="s3" style="width: 15%;"></td>
+              <td class="s3" style="width: 70%; vertical-align: middle;" dir="ltr">
+                <div style="color:#ffffff; text-align: center; font-size: 30pt;">Tabela de Resultados - eXp [2/2]</div>
+              </td>
+              <td class="s3" style="width:  15%;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <div class="ritz grid-container" dir="ltr">
+          <table class="waffle" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr style="height: 5px;">
+                <td class="r0" dir="ltr" style="width: 20%;">Jogs.</td>
+                <td class="r1" dir="ltr" style="width:  2%;">P</td>
+                <td class="r2" dir="ltr" style="width:  9%;">MÃO</td>
+                <td class="r3" dir="ltr" style="width:  9%;">AMA</td>
+                <td class="r4" dir="ltr" style="width:  9%;">VER</td>
+                <td class="r5" dir="ltr" style="width:  9%;">AZL</td>
+                <td class="r6" dir="ltr" style="width:  9%;">VRD</td>
+                <td class="r7" dir="ltr" style="width: 15%;">SUB</td>
+                <td class="r7" dir="ltr" style="width: 18%;">TOTAL</td>
+              </tr>
+            <tr style="height: 4px">
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r8">5</td>
+              <td class="r9">1</td>
+              <td class="r10" dir="ltr" id="404"><a href="calcmao.html?arg1=4&amp;arg2=0&amp;arg3=4"><div  id="vlr404">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="400"><a href="partida.html?arg1=4&amp;arg2=0&amp;arg3=0"><div  id="vlr400">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="401"><a href="partida.html?arg1=4&amp;arg2=0&amp;arg3=1"><div  id="vlr401">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="402"><a href="partida.html?arg1=4&amp;arg2=0&amp;arg3=2"><div  id="vlr402">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="403"><a href="partida.html?arg1=4&amp;arg2=0&amp;arg3=3"><div  id="vlr403">0</div></a></a></td>
+              <td class="r15">     <div id="sub40">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17" id="jog5" title="Jogador 5" onclick="EditarNome(this,4)">Jogador5</td>
+              <td class="r9">2</td>
+              <td class="r10" dir="ltr" id="414"><a href="calcmao.html?arg1=4&amp;arg2=1&amp;arg3=4"><div  id="vlr414">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="410"><a href="partida.html?arg1=4&amp;arg2=1&amp;arg3=0"><div  id="vlr410">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="411"><a href="partida.html?arg1=4&amp;arg2=1&amp;arg3=1"><div  id="vlr411">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="412"><a href="partida.html?arg1=4&amp;arg2=1&amp;arg3=2"><div  id="vlr412">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="413"><a href="partida.html?arg1=4&amp;arg2=1&amp;arg3=3"><div  id="vlr413">0</div></a></a></td>
+              <td class="r15">     <div id="sub41">0</div></td>
+              <td class="r16">     <div id="tot4">0</div></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17"></td>
+              <td class="r9">3</td>
+              <td class="r10" dir="ltr" id="424"><a href="calcmao.html?arg1=4&amp;arg2=2&amp;arg3=4"><div  id="vlr424">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="420"><a href="partida.html?arg1=4&amp;arg2=2&amp;arg3=0"><div  id="vlr420">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="421"><a href="partida.html?arg1=4&amp;arg2=2&amp;arg3=1"><div  id="vlr421">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="422"><a href="partida.html?arg1=4&amp;arg2=2&amp;arg3=2"><div  id="vlr422">0</div></a></a></td>
+              <td class="r14" dir="ltr" id= "23"><a href="partida.html?arg1=4&amp;arg2=2&amp;arg3=3"><div  id="vlr423">0</div></a></a></td>
+              <td class="r15">     <div id="sub42">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 4px">
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r8">6</td>
+              <td class="r9">1</td>
+              <td class="r10" dir="ltr" id="504"><a href="calcmao.html?arg1=5&amp;arg2=0&amp;arg3=4"><div  id="vlr504">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="500"><a href="partida.html?arg1=5&amp;arg2=0&amp;arg3=0"><div  id="vlr500">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="501"><a href="partida.html?arg1=5&amp;arg2=0&amp;arg3=1"><div  id="vlr501">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="502"><a href="partida.html?arg1=5&amp;arg2=0&amp;arg3=2"><div  id="vlr502">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="503"><a href="partida.html?arg1=5&amp;arg2=0&amp;arg3=3"><div  id="vlr503">0</div></a></a></td>
+              <td class="r15">     <div id="sub50">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17" id="jog6" title="Jogador 6" onclick="EditarNome(this,5)">Jogador6</td>
+              <td class="r9">2</td>
+              <td class="r10" dir="ltr" id="514"><a href="calcmao.html?arg1=5&amp;arg2=1&amp;arg3=4"><div  id="vlr514">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="510"><a href="partida.html?arg1=5&amp;arg2=1&amp;arg3=0"><div  id="vlr510">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="511"><a href="partida.html?arg1=5&amp;arg2=1&amp;arg3=1"><div  id="vlr511">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="512"><a href="partida.html?arg1=5&amp;arg2=1&amp;arg3=2"><div  id="vlr512">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="513"><a href="partida.html?arg1=5&amp;arg2=1&amp;arg3=3"><div  id="vlr513">0</div></a></a></td>
+              <td class="r15">     <div id="sub51">0</div></td>
+              <td class="r16">     <div id="tot5">0</div></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17"></td>
+              <td class="r9">3</td>
+              <td class="r10" dir="ltr" id="524"><a href="calcmao.html?arg1=5&amp;arg2=2&amp;arg3=4"><div  id="vlr524">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="520"><a href="partida.html?arg1=5&amp;arg2=2&amp;arg3=0"><div  id="vlr520">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="521"><a href="partida.html?arg1=5&amp;arg2=2&amp;arg3=1"><div  id="vlr521">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="522"><a href="partida.html?arg1=5&amp;arg2=2&amp;arg3=2"><div  id="vlr522">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="523"><a href="partida.html?arg1=5&amp;arg2=2&amp;arg3=3"><div  id="vlr523">0</div></a></a></td>
+              <td class="r15">     <div id="sub52">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 4px">
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r8">7</td>
+              <td class="r9">1</td>
+              <td class="r10" dir="ltr" id="604"><a href="calcmao.html?arg1=6&amp;arg2=0&amp;arg3=4"><div  id="vlr604">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="600"><a href="partida.html?arg1=6&amp;arg2=0&amp;arg3=0"><div  id="vlr600">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="601"><a href="partida.html?arg1=6&amp;arg2=0&amp;arg3=1"><div  id="vlr601">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="602"><a href="partida.html?arg1=6&amp;arg2=0&amp;arg3=2"><div  id="vlr602">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="603"><a href="partida.html?arg1=6&amp;arg2=0&amp;arg3=3"><div  id="vlr603">0</div></a></a></td>
+              <td class="r15">     <div id="sub60">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17" id="jog7" title="Jogador 7" onclick="EditarNome(this,6)">Jogador7</td>
+              <td class="r9">2</td>
+              <td class="r10" dir="ltr" id="614"><a href="calcmao.html?arg1=6&amp;arg2=1&amp;arg3=4"><div  id="vlr614">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="610"><a href="partida.html?arg1=6&amp;arg2=1&amp;arg3=0"><div  id="vlr610">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="611"><a href="partida.html?arg1=6&amp;arg2=1&amp;arg3=1"><div  id="vlr611">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="612"><a href="partida.html?arg1=6&amp;arg2=1&amp;arg3=2"><div  id="vlr612">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="613"><a href="partida.html?arg1=6&amp;arg2=1&amp;arg3=3"><div  id="vlr613">0</div></a></a></td>
+              <td class="r15">     <div id="sub61">0</div></td>
+              <td class="r16">     <div id="tot6">0</div></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17"></td>
+              <td class="r9">3</td>
+              <td class="r10" dir="ltr" id="624"><a href="calcmao.html?arg1=6&amp;arg2=2&amp;arg3=4"><div  id="vlr624">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="620"><a href="partida.html?arg1=6&amp;arg2=2&amp;arg3=0"><div  id="vlr620">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="621"><a href="partida.html?arg1=6&amp;arg2=2&amp;arg3=1"><div  id="vlr621">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="622"><a href="partida.html?arg1=6&amp;arg2=2&amp;arg3=2"><div  id="vlr622">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="623"><a href="partida.html?arg1=6&amp;arg2=2&amp;arg3=3"><div  id="vlr623">0</div></a></a></td>
+              <td class="r15">     <div id="sub62">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 4px">
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r8">8</td>
+              <td class="r9">1</td>
+              <td class="r10" dir="ltr" id="704"><a href="calcmao.html?arg1=7&amp;arg2=0&amp;arg3=4"><div  id="vlr704">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="700"><a href="partida.html?arg1=7&amp;arg2=0&amp;arg3=0"><div  id="vlr700">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="701"><a href="partida.html?arg1=7&amp;arg2=0&amp;arg3=1"><div  id="vlr701">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="702"><a href="partida.html?arg1=7&amp;arg2=0&amp;arg3=2"><div  id="vlr702">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="703"><a href="partida.html?arg1=7&amp;arg2=0&amp;arg3=3"><div  id="vlr703">0</div></a></a></td>
+              <td class="r15">     <div id="sub70">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17" id="jog8" title="Jogador 8" onclick="EditarNome(this,7)">Jogador8</td>
+              <td class="r9">2</td>
+              <td class="r10" dir="ltr" id="714"><a href="calcmao.html?arg1=7&amp;arg2=1&amp;arg3=4"><div  id="vlr714">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="710"><a href="partida.html?arg1=7&amp;arg2=1&amp;arg3=0"><div  id="vlr710">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="711"><a href="partida.html?arg1=7&amp;arg2=1&amp;arg3=1"><div  id="vlr711">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="712"><a href="partida.html?arg1=7&amp;arg2=1&amp;arg3=2"><div  id="vlr712">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="713"><a href="partida.html?arg1=7&amp;arg2=1&amp;arg3=3"><div  id="vlr713">0</div></a></a></td>
+              <td class="r15">     <div id="sub71">0</div></td>
+              <td class="r16">     <div id="tot7">0</div></td>
+            </tr>
+            <tr style="height: 80px">
+              <td class="r17"></td>
+              <td class="r9">3</td>
+              <td class="r10" dir="ltr" id="724"><a href="calcmao.html?arg1=7&amp;arg2=2&amp;arg3=4"><div  id="vlr724">0</div></a></a></td>
+              <td class="r11" dir="ltr" id="720"><a href="partida.html?arg1=7&amp;arg2=2&amp;arg3=0"><div  id="vlr720">0</div></a></a></td>
+              <td class="r12" dir="ltr" id="721"><a href="partida.html?arg1=7&amp;arg2=2&amp;arg3=1"><div  id="vlr721">0</div></a></a></td>
+              <td class="r13" dir="ltr" id="722"><a href="partida.html?arg1=7&amp;arg2=2&amp;arg3=2"><div  id="vlr722">0</div></a></a></td>
+              <td class="r14" dir="ltr" id="723"><a href="partida.html?arg1=7&amp;arg2=2&amp;arg3=3"><div  id="vlr723">0</div></a></a></td>
+              <td class="r15">     <div id="sub72">0</div></td>
+              <td class="r16"></td>
+            </tr>
+            <tr style="height: 4px">
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+              <td class="r18"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ritz grid-container" dir="ltr">
+        <table class="waffle" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr style="height: 10px">
+              <td class="s0" style="width: 20%;"></td>
+              <td class="s0" style="width: 20%;"></td>
+              <td class="s0" style="width: 20%;"></td>
+              <td class="s0" style="width:  5%;"></td>
+              <td class="s0" style="width: 20%;"></td>
+            </tr>
+            <tr style="height: 60px">
+              <td class="s0"></td>
+              <td class="s0"></td>
+              <td class="s11"><img src="./img/reset.png" class="btclass" onclick="resetcalc();" style="width:229px;height:66px;"></td>
+              <td class="s0"></td>
+              <td class="s11"><img src="./img/ajuda.png" class="btclass" onclick="ajuda1();" style="width:229px;height:66px;"></td>
+            </tr>
+            <tr style="height:20px">
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+              <td class="r7"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <script type="text/javascript" src="expmotor.js"></script>
+    <script type="text/javascript" src="expcalc.js"></script>
+  </body>
 </html>

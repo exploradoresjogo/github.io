@@ -1,7 +1,7 @@
 //
 // eXp Calc
 // Totalização e Calculadora do jogo eXploradores
-// Brasil
+// Paulo Mello - 08/04/2024 - Teresópolis - RJ - Brasil
 //
 
 

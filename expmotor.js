@@ -1,6 +1,7 @@
 //
 // eXp Calc - eXPmotor
 // Manipulação e cálculo do jogo
+// AUTHOR: Paulo Mello
 // Consultoria: Márcio Freitas - Alemanha
 //
 
@@ -53,7 +54,8 @@ function resetcalc() {
 function voltartabela(){
    salvarListaJogadores(listaJogadores);
   //window.history.back();
-  window.location.href = window.location.href = "calculadora.html"; // // Redirecionar para a página "caclculadora.html"
+
+  window.location.href = window.location.href = "index.html"; // // Redirecionar para a página "index.html"
 }
 
 
@@ -61,7 +63,7 @@ function criaJogador(){
   var LOClistaJogadores = [];
 
   // Definir os nomes dos jogadores
-  let nomesJogadores = [ "José", "Paulo", "Joci", "Leão", "Mariana", "Marllon", "Cristina", "Mario"];
+  let nomesJogadores = [ "Unaldus", "Duclia", "Treviônius", "Quatila", "Cincelius", "Sextius", "Septinia", "Octávion"];
   
   // Loop para criar os jogadores e suas partidas
   for (let i = 0; i < nomesJogadores.length; i++) {
