@@ -3,124 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exploradores</title>
+    <title>Exploradores - O Jogo de Aventura e Estratégia</title>
+    <title>Exploradores - Jogo de Aventura e Estratégia</title>
+    <link rel="icon" href="./favicon.png" type="image/png">
     <style>
         body {
             background-color: #000;
             color: #fff;
             font-family: Arial, sans-serif;
             text-align: center;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        .logo {
-            margin-bottom: 20px;
-        }
-
-        .bubble {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            margin: 10px;
-            border-radius: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        .bubble img {
-            width: 160px;
-            height: 160px;
-        }
-
-        .bubble p {
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-            text-align: center;
-            font-size: 14px;
             margin: 0;
         }
-
-        .yellow {
-            background-color: #ff0;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
-
-        .red {
-            background-color: #f00;
+        .title-image {
+            width: 100%;
+            height: auto;
         }
-
-        .blue {
-            background-color: #00f;
+        .table-container {
+            display: table;
+            width: 100%;
+            margin: 20px 0;
         }
-
-        .green {
-            background-color: #0f0;
+        .row {
+            display: table-row;
         }
-
-        .small-icons {
+        .cell {
+            display: table-cell;
+            vertical-align: top;
+            text-align: center;
+        }
+        .cell img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .first-table .cell:nth-child(2) {
+            padding-top: 50px; /* Ajuste o valor conforme necessário */
+        }
+        .second-table {
+            margin-top: 10px; /* Espaço vazio entre as tabelas */
+            text-align: center;
+        }
+        .second-table .cell img {
+            width: 50px; /* Definindo um tamanho fixo para ícones pequenos */
+            height: 50px; /* Definindo um tamanho fixo para ícones pequenos */
+        }
+        .second-table .cell {
+            padding: 0 25px; /* Espaçamento horizontal entre as células */
+        }
+        .second-table .row {
             display: flex;
             justify-content: center;
-            margin-top: 20px;
         }
-
-        .small-icons a {
-            margin: 0 10px;
-        }
-
-        .small-icons img {
-            width: 30px;
-            height: 30px;
-        }
-
-        footer {
-            margin-top: 20px;
-            font-size: 12px;
+        .second-table .cell {
+            padding: 0 25px; /* Espaçamento horizontal entre as células */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">
-            <img src="img/bttitulo.png" alt="Exploradores" style="width: 50%;">
+        <!-- Imagem de título -->
+        <img src="img/bttitulo.png" alt="Título" class="title-image">
+
+        <!-- Primeira tabela -->
+        <div class="table-container first-table">
+            <div class="row">
+                <div class="cell"><a href="calculadora.html" target="_blank"><img src="img/btcalculadora.png" alt="Calculadora"></a></div>
+                <div class="cell"><a href="./download/exploradoresmanualmobile.pdf" target="_blank"><img src="img/btmanual.png" alt="Manual do jogo para celular"></a></div>
+            </div>
+            <div class="row">
+                <div class="cell"><a href="ajuda1.html" target="_blank"><img src="img/btmanualcalc.png" alt="Manual da calculadora"></a></div>
+                <div class="cell"><a href="sobre.html" target="_blank"><img src="img/btsobre.png" alt="Sobre o jogo Exploradores"></a></div>
+            </div>
         </div>
 
-        <div class="bubble yellow" onclick="window.location.href='calculadora.html'">
-            <img src="img/btcalculadora.png" alt="Calculadora">
+        <!-- Espaço vazio -->
+        <div style="height: 10px;"></div>
+
+        <!-- Segunda tabela -->
+        <div class="table-container second-table">
+            <div class="row">
+                <div class="cell"><a href="https://www.facebook.com/share/VeXWJtTjgaeFu7Po/?mibextid=qi2Omg" target="_blank"><img src="img/btfacebook.png" alt="Facebook"></a></div>
+                <div class="cell"><a href="https://www.instagram.com/jogo.exploradores?igsh=MXF4dTI3OGw3ZXFiag==" target="_blank"><img src="img/btinstagram.png" alt="Instagram"></a></div>
+                <div class="cell"><a href="mailto:jogoexploradores@gmail.com" target="_blank"><img src="img/btgmail.png" alt="Mande um email pra nós"></a></div>
+            </div>
         </div>
 
-
-        <a href="exploradoresmanualmobile.pdf" download>
-              <div class="bubble blue">
-                  <img src="img/btmanual.png" alt="Manual (Mobile)">
-               </div>
-         </a>
-        
-        <div class="bubble red" onclick="window.location.href='calculadora.html'">
-            <img src="img/btmanualcalc.png" alt="Calculadora">
-        </div>           
-            
-        <div class="bubble green" onclick="window.location.href='sobre.html'">
-            <img src="img/btsobre.png" alt="Sobre Nós">
-        </div>
-
-        <div class="small-icons">
-            <a href="https://www.facebook.com"><img src="img/btfacebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com"><img src="img/btinstagram.png" alt="Instagram"></a>
-            <a href="mailto:email@exemplo.com"><img src="img/btgmail.png" alt="e-mail"></a>
-        </div>
-
-        <footer>
-            <p>Copyright © 2024</p>
-        </footer>
+        <!-- Espaço vazio -->
+        <div style="height: 5px;"></div>
+        <div><h1>Copyright 2024</h1></div>
     </div>
 </body>
 </html>
