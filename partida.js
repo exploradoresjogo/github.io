@@ -1,10 +1,11 @@
 /*
-===================================
-== eXp Calc                      ==
-== MÓDULO: partida               ==
-== Data 27/03/2024               ==
-== PARTIDA (COR)                 ==
-===================================
+====================================
+== eXp Calc                       ==
+== MÓDULO: partiday               ==
+== (c) Paulo Mello - Teresópolis  ==
+== Data 27/03/2024                ==
+== PARTIDA AMARELA                ==
+====================================
 */
 
 
@@ -194,6 +195,30 @@ element.innerHTML =  listaJogadores[StrNumJogador].nome
 
   AtualizaVariavel();
 }
+
+
+function marcarTodosNumeros() {
+  // Obtém todos os elementos com IDs que começam com "num"
+  let elementosNUM = document.querySelectorAll('[id^="num"]');
+
+  elementosNUM.forEach(elemento => {
+    // Obtém o índice do número a partir do ID do elemento
+    let NumeroNaTela = parseInt(elemento.id.replace("num", ""));
+
+    // Verifica se o número está entre 2 e 10
+    if (NumeroNaTela >= 2 && NumeroNaTela <= 10) {
+      // Marca o número na tela como "✔" e atualiza o array CartasCampanha
+      CartasCampanha[NumeroNaTela] = NumeroNaTela;
+      elemento.innerHTML = "✔";
+      elemento.style.color = "red";
+    }
+  });
+
+  // Atualiza a tela e recalcula os totais
+  RefreshPartida();
+}
+
+
 
 
 //
