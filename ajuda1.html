@@ -44,10 +44,16 @@
             border-collapse: collapse;
         }
 
-        .image img {
-            max-width: 100%;
-            height: auto;
-        }
+.image {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente, caso o container tenha altura */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
 
         .text {margin: 20px 0;}
     </style>
