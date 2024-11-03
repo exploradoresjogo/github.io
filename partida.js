@@ -197,20 +197,35 @@ element.innerHTML =  listaJogadores[StrNumJogador].nome
 }
 
 
+
 function marcarTodosNumeros() {
   // Obtém todos os elementos com IDs que começam com "num"
   let elementosNUM = document.querySelectorAll('[id^="num"]');
+  let algumMarcado = false;
 
+  // Primeiro, verifica se há algum número entre 2 e 10 marcado com "✔"
   elementosNUM.forEach(elemento => {
-    // Obtém o índice do número a partir do ID do elemento
     let NumeroNaTela = parseInt(elemento.id.replace("num", ""));
+    if (NumeroNaTela >= 2 && NumeroNaTela <= 10 && elemento.innerHTML === "✔") {
+      algumMarcado = true;
+    }
+  });
 
-    // Verifica se o número está entre 2 e 10
+  // Se houver algum marcado, desmarcamos todos. Caso contrário, marcamos todos.
+  elementosNUM.forEach(elemento => {
+    let NumeroNaTela = parseInt(elemento.id.replace("num", ""));
     if (NumeroNaTela >= 2 && NumeroNaTela <= 10) {
-      // Marca o número na tela como "✔" e atualiza o array CartasCampanha
-      CartasCampanha[NumeroNaTela] = NumeroNaTela;
-      elemento.innerHTML = "✔";
-      elemento.style.color = "red";
+      if (algumMarcado) {
+        // Desmarca: define como "✘" e usa 0 para compatibilidade com ToggleNumber
+        CartasCampanha[NumeroNaTela] = 0;
+        elemento.innerHTML = "✘";
+        elemento.style.color = "black";
+      } else {
+        // Marca: define como "✔"
+        CartasCampanha[NumeroNaTela] = NumeroNaTela;
+        elemento.innerHTML = "✔";
+        elemento.style.color = "red";
+      }
     }
   });
 
@@ -218,6 +233,9 @@ function marcarTodosNumeros() {
   RefreshPartida();
 }
 
+
+
+  
 
 
 
