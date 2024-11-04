@@ -1,7 +1,7 @@
 /*
 ====================================
-== eXp Calc                       ==
-== Totalização e Calculadora do   ==
+== eXpCalc                        ==
+== Placar e Calculadora do        ==
 == jogo eXploradores              ==
 == MÓDULO: expdalc                ==
 == Roberto Wollen                 ==
