@@ -1,14 +1,14 @@
 /*
-====================================
-== eXp Calc                       ==
-== MÓDULO: partiday               ==
-== (c) Paulo Mello - Teresópolis  ==
-== Data 27/03/2024                ==
-== PARTIDA AMARELA                ==
-====================================
+==========================================
+== eXpCalc                              ==
+== Placar e Calculadora do              ==
+== jogo eXploradores                    ==
+== MÓDULO: partida.js                   ==
+== Author: Roberto Wollen               ==
+== Data 27/03/2024                      ==
+== Consultor: Márcio Freitas - Alemanha ==
+==========================================
 */
-
-
 
 
 
