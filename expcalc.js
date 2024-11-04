@@ -3,7 +3,7 @@
 == eXpCalc                              ==
 == Placar e Calculadora do              ==
 == jogo eXploradores                    ==
-== MÓDULO: expdalc                      ==
+== MÓDULO: expdalc.js                   ==
 == Author: Roberto Wollen               ==
 == Data 08/04/2024                      ==
 == Consultor: Márcio Freitas - Alemanha ==
