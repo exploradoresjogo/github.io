@@ -1,9 +1,13 @@
-//
-// eXp Calc
-// Totalização e Calculadora do jogo eXploradores
-// Paulo Mello - 08/04/2024 - Teresópolis - RJ - Brasil
-//
-
+/*
+====================================
+== eXp Calc                       ==
+== Totalização e Calculadora do   ==
+== jogo eXploradores              ==
+== MÓDULO: expdalc                ==
+== Roberto Wollen                 ==
+== Data 08/04/2024                ==
+====================================
+*/
 
 // DEBUG
 function ola() 
