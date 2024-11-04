@@ -1,10 +1,14 @@
-//
-// eXp Calc - eXPmotor
-// Manipulação e cálculo do jogo
-// AUTHOR: Paulo Mello
-// Consultoria: Márcio Freitas - Alemanha
-//
-
+/*
+==========================================
+== eXpCalc                              ==
+== Placar e Calculadora do              ==
+== jogo eXploradores                    ==
+== MÓDULO: expmotor                     ==
+== Author: Roberto Wollen               ==
+== Data 09/04/2024                      ==
+== Consultor: Márcio Freitas - Alemanha ==
+==========================================
+*/
 
 //
 // código gravar variável by ChatGPT
