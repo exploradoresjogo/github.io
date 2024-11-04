@@ -1,12 +1,15 @@
 /*
-====================================
-== eXp Calc                       ==
-== MÓDULO: calc_mao               ==
-==                                ==
-== Data 27/03/2024                ==
-== CALCULA A MÃO DO JOGADOR       ==
-====================================
+==========================================
+== eXpCalc                              ==
+== Placar e Calculadora do              ==
+== jogo eXploradores                    ==
+== MÓDULO: calc_mao.js                  ==
+== Calcula a mão do jogador             ==
+== Author: Roberto Wollen               ==
+== Data 27/03/2024                      ==
+==========================================
 */
+
 
 //
 // Faz um beep em caso de atingir o limite
