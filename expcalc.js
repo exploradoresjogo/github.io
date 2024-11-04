@@ -1,12 +1,13 @@
 /*
-====================================
-== eXpCalc                        ==
-== Placar e Calculadora do        ==
-== jogo eXploradores              ==
-== MÓDULO: expdalc                ==
-== Roberto Wollen                 ==
-== Data 08/04/2024                ==
-====================================
+==========================================
+== eXpCalc                              ==
+== Placar e Calculadora do              ==
+== jogo eXploradores                    ==
+== MÓDULO: expdalc                      ==
+== Author: Roberto Wollen               ==
+== Data 08/04/2024                      ==
+== Consultor: Márcio Freitas - Alemanha ==
+==========================================
 */
 
 // DEBUG
