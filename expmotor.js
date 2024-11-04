@@ -3,7 +3,7 @@
 == eXpCalc                              ==
 == Placar e Calculadora do              ==
 == jogo eXploradores                    ==
-== MÓDULO: expmotor                     ==
+== MÓDULO: expmotor.js                  ==
 == Author: Roberto Wollen               ==
 == Data 09/04/2024                      ==
 == Consultor: Márcio Freitas - Alemanha ==
