@@ -164,8 +164,8 @@ element.innerHTML =  listaJogadores[StrNumJogador].nome
 // Variáveis de limite para os ítens na mão
 // Fazer uma tela de configuração 
 // 
-const Certificado_Max=6
-const Financ_Max=12
+const Certificado_Max=12
+const Financ_Max=6
 const Protecao_Max=12
 const Terremoto_Max=9
 const Tesouro_Max= 6
