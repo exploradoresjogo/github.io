@@ -165,9 +165,9 @@ element.innerHTML =  listaJogadores[StrNumJogador].nome
 // Fazer uma tela de configuração 
 // 
 const Certificado_Max=6
-const Financ_Max=6
-const Protecao_Max=6
-const Terremoto_Max=6
+const Financ_Max=12
+const Protecao_Max=12
+const Terremoto_Max=9
 const Tesouro_Max= 6
 
 // Variáveis
