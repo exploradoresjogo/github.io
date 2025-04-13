@@ -1,14 +1,16 @@
 /*
-==========================================
-== eXpCalc                              ==
-== Placar e Calculadora do              ==
-== jogo eXploradores                    ==
-== MÓDULO: partida.js                   ==
-== Author: Roberto Wollen               ==
-== Data 27/03/2024                      ==
-== Consultor: Márcio Freitas - Alemanha ==
-==========================================
+====================================
+== eXp Calc                       ==
+== MÓDULO: partiday               ==
+== (c) Paulo Mello - Teresópolis  ==
+== Data 27/03/2024                ==
+== CALCULA PARTIDA                ==
+====================================
 */
+// !!! ATENÇÃO !!!! 
+//
+// NESTA VERSÃO O FINANCIAMENTO VALE SEMPRE ZERO 
+//
 
 
 
@@ -171,8 +173,9 @@ element.innerHTML =  listaJogadores[StrNumJogador].nome
   
 
   // Calcula Financiamentos
-  if (NumFinanc>0);  
-     {TotalCor = TotalCor+(TotalCor*NumFinanc)};
+  if (NumFinanc>0)  
+     { //TotalCor = TotalCor+(TotalCor*NumFinanc); // Cálculo do Financiamento desativado 
+     }
   //Calcula NumTotTesouros        //
   if (NumTotTesouros>0) 
      {TotalCor = TotalCor*(NumTotTesouros*3)};
