@@ -1,14 +1,9 @@
-/*
-==========================================
-== eXpCalc                              ==
-== Placar e Calculadora do              ==
-== jogo eXploradores                    ==
-== MÓDULO: expdalc.js                   ==
-== Author: Roberto Wollen               ==
-== Data 08/04/2024                      ==
-== Consultor: Márcio Freitas - Alemanha ==
-==========================================
-*/
+//
+// eXp Calc
+// Totalização e Calculadora do jogo eXploradores
+// Paulo Mello - 08/04/2024 - Teresópolis - RJ - Brasil
+//
+
 
 // DEBUG
 function ola() 
